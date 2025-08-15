@@ -438,8 +438,8 @@ export default function FeaturesPage() {
             </div>
           </div>
 
-                    {/* System Information */}
-          <div className="mb-24">
+          {/* System Information */}
+          <div className="mt-32 mb-24">
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">System Information</h2>
               <p className="text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
@@ -509,18 +509,7 @@ export default function FeaturesPage() {
                     <div className="w-4 h-4 bg-green-400 rounded-full mr-4 animate-pulse"></div>
                     <span className="text-lg font-medium">256-bit SSL Encryption</span>
                   </div>
-                  <div className="flex items-center p-4 bg-white/10 rounded-2xl backdrop-blur-sm">
-                    <div className="w-4 h-4 bg-purple-400 rounded-full mr-4 animate-pulse"></div>
-                    <span className="text-lg font-medium">GDPR & SOC 2 Compliant</span>
-                  </div>
-                  <div className="flex items-center p-4 bg-white/10 rounded-2xl backdrop-blur-sm">
-                    <div className="w-4 h-4 bg-orange-400 rounded-full mr-4 animate-pulse"></div>
-                    <span className="text-lg font-medium">Mobile-First Responsive Design</span>
-                  </div>
-                  <div className="flex items-center p-4 bg-white/10 rounded-2xl backdrop-blur-sm">
-                    <div className="w-4 h-4 bg-red-400 rounded-full mr-4 animate-pulse"></div>
-                    <span className="text-lg font-medium">API-First Architecture</span>
-                  </div>
+                  
                 </div>
               </div>
             </div>

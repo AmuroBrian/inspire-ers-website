@@ -138,6 +138,15 @@ body {
   animation: twinkle 4s ease-in-out infinite;
 }
 
+@keyframes spin-reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 3s linear infinite;
+}
+
 @keyframes fade-in-up {
   0% {
     opacity: 0;

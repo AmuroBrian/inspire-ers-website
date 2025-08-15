@@ -6,7 +6,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-6 py-4">
           {/* FOLLOW US Text */}
           <div className="text-white font-semibold text-lg drop-shadow-lg">
-            FOLLOW US:
+            CONNECT WITH US:
           </div>
           
           {/* Social Media Links */}
@@ -22,7 +22,7 @@ export default function Footer() {
             </a>
             
             {/* TikTok */}
-            <a href="https://www.tiktok.com/@inspirenextglobal" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white hover:text-pink-500 transition-all duration-300 drop-shadow-lg">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white hover:text-pink-500 transition-all duration-300 drop-shadow-lg">
               <div className="w-6 h-6 bg-black rounded flex items-center justify-center">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53-.63 3.11-1.75 4.27-.96 1.08-2.31 1.22-3.56.8-.34-.11-.7-.31-1.01-.54-.32-.24-.6-.52-.84-.83-.48-.6-.87-1.26-1.11-1.96-.15-.42-.23-.87-.24-1.32-.01-.44-.01-.88 0-1.32.01-.44.09-.87.24-1.32.24-.7.63-1.36 1.11-1.96.24-.31.52-.59.84-.83.31-.23.67-.43 1.01-.54.25-.08.51-.12.78-.14.27-.02.54-.02.81-.02.44 0 .88.01 1.32.02.45.01.88.09 1.32.24.7.24 1.36.63 1.96 1.11.31.24.59.52.83.84.23.31.43.67.54 1.01.08.25.12.51.14.78.02.27.02.54.02.81 0 .44-.01.88-.02 1.32-.01.45-.09.88-.24 1.32-.24.7-.63 1.36-1.11 1.96-.24.31-.52.59-.84.83-.31.23-.67.43-1.01.54-.25.08-.51.12-.78.14-.27.02-.54.02-.81.02-.44 0-.88-.01-1.32-.02-.45-.01-.88-.09-1.32-.24-.7-.24-1.36-.63-1.96-1.11-.31-.24-.59-.52-.83-.84-.23-.31-.43-.67-.54-1.01-.08-.25-.12-.51-.14-.78-.02-.27-.02-.54-.02-.81 0-.44.01-.88.02-1.32.01-.45.09-.88.24-1.32.24-.7.63-1.36 1.11-1.96.24-.31.52-.59.84-.83.31-.23.67-.43 1.01-.54.25-.08.51-.12.78-.14.27-.02.54-.02.81-.02z"/>

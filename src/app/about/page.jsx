@@ -226,7 +226,7 @@ export default function AboutPage() {
               </div>
               
               {/* Vision Card */}
-              <div className="bg-gradient-to-br from-green-500 to-green-600 p-6 rounded-2xl text-white">
+              <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-2xl text-white">
                 <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
                 <p className="text-lg leading-relaxed mb-4">
                   To become the global standard for employee record management, empowering businesses to focus on what truly matters - their people and their growth.
@@ -293,19 +293,19 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-white mb-4">Quick Stats</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">500+</div>
+                    <div className="text-3xl font-bold text-blue-400">2</div>
                     <p className="text-gray-200 text-sm">Companies Served</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-400">50K+</div>
+                    <div className="text-3xl font-bold text-blue-400">50+</div>
                     <p className="text-gray-200 text-sm">Employees Managed</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400">99.9%</div>
+                    <div className="text-3xl font-bold text-blue-400">99.9%</div>
                     <p className="text-gray-200 text-sm">Uptime</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-400">24/7</div>
+                    <div className="text-3xl font-bold text-blue-400">Mon to Fri</div>
                     <p className="text-gray-200 text-sm">Support</p>
                   </div>
                 </div>
