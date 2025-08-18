@@ -107,15 +107,7 @@ export default function Header() {
               </button>
               
               <button
-                onClick={() => {
-                  // Create a temporary link element to trigger download
-                  const link = document.createElement('a');
-                  link.href = '/downloads/msi-installer.msi'; // You'll need to add this file to your public folder
-                  link.download = 'Inspire-ERS-Installer.msi';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
+                onClick={() => handleNavigation('/download')}
                 className="text-white hover:text-orange-400 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center drop-shadow-lg cursor-pointer"
               >
                 Download App Here
@@ -127,7 +119,7 @@ export default function Header() {
           </nav>
 
 
-
+    
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -183,18 +175,10 @@ export default function Header() {
                 FEATURES
               </button>
               <button
-                onClick={() => {
-                  // Create a temporary link element to trigger download
-                  const link = document.createElement('a');
-                  link.href = '/downloads/msi-installer.msi'; // You'll need to add this file to your public folder
-                  link.download = 'Inspire-ERS-Installer.msi';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
+                onClick={() => handleNavigation('/download')}
                 className="text-gray-800 hover:text-orange-500 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 cursor-pointer w-full text-left"
               >
-                Download ERS Here
+                Download App Here
               </button>
             </div>
           </div>
