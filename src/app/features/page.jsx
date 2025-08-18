@@ -191,7 +191,7 @@ export default function FeaturesPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Core Features</h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Our comprehensive system provides everything you need to manage your workforce efficiently
             </p>
           </div>
@@ -442,12 +442,12 @@ export default function FeaturesPage() {
           <div className="mt-32 mb-24">
             <div className="text-center mb-20">
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">System Information</h2>
-              <p className="text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
-                Get detailed insights into our system architecture and capabilities
-              </p>
+                          <p className="text-2xl text-white max-w-4xl mx-auto leading-relaxed">
+              Get detailed insights into our system architecture and capabilities
+            </p>
             </div>
             
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-16 items-start">
               <div className="space-y-10">
                 <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                   <div className="flex items-start space-x-4">
@@ -520,7 +520,7 @@ export default function FeaturesPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-white mb-8">
               Experience the power of our Employee Record System today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -535,7 +535,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      <Footer />
+      <Footer textColor="white" />
     </div>
   );
 }

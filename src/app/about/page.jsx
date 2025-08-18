@@ -187,7 +187,7 @@ export default function AboutPage() {
         </div>
 
         <div className="max-w-7xl mx-auto w-full relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Side - Text Content */}
             <div className="space-y-8">
               <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
@@ -321,7 +321,7 @@ export default function AboutPage() {
 
 
 
-      <Footer />
+      <Footer textColor="white" />
     </div>
   );
 }
