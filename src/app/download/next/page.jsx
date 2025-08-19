@@ -2,96 +2,52 @@
 
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from '@/firebase/firebaseConfig'; 
 
 export default function DownloadNextPage() {
   const [selectedPlatform, setSelectedPlatform] = useState("Linux");
+  const [installers, setInstallers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const downloadData = {
-    Linux: [
-      {
-        description: "ARM64 Compressed Archive",
-        fileSize: "229.37 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_linux-aarch64_bin.tar.gz",
-        sha256: "sha256"
-      },
-      {
-        description: "ARM64 RPM Package",
-        fileSize: "228.98 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_linux-aarch64_bin.rpm",
-        sha256: "sha256 (OL 9 GPG Key)"
-      },
-      {
-        description: "x64 Compressed Archive",
-        fileSize: "232.15 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_linux-x64_bin.tar.gz",
-        sha256: "sha256"
-      },
-      {
-        description: "x64 Debian Package",
-        fileSize: "200.21 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_linux-x64_bin.deb",
-        sha256: "sha256"
-      },
-      {
-        description: "x64 RPM Package",
-        fileSize: "231.71 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_linux-x64_bin.rpm",
-        sha256: "sha256 (OL 9 GPG Key)"
-      }
-    ],
-    Windows: [
-      {
-        description: "x64 Installer",
-        fileSize: "245.89 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_windows-x64_bin.exe",
-        sha256: "sha256"
-      },
-      {
-        description: "x64 MSI Installer",
-        fileSize: "248.12 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_windows-x64_bin.msi",
-        sha256: "sha256"
-      },
-      {
-        description: "x64 Compressed Archive",
-        fileSize: "235.67 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_windows-x64_bin.zip",
-        sha256: "sha256"
-      }
-    ],
-    macOS: [
-      {
-        description: "ARM64 DMG Installer",
-        fileSize: "218.45 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_macos-aarch64_bin.dmg",
-        sha256: "sha256"
-      },
-      {
-        description: "x64 DMG Installer",
-        fileSize: "220.78 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_macos-x64_bin.dmg",
-        sha256: "sha256"
-      },
-      {
-        description: "ARM64 Compressed Archive",
-        fileSize: "215.92 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_macos-aarch64_bin.tar.gz",
-        sha256: "sha256"
-      },
-      {
-        description: "x64 Compressed Archive",
-        fileSize: "218.34 MB",
-        downloadLink: "https://download.oracle.com/java/24/latest/jdk-24_macos-x64_bin.tar.gz",
-        sha256: "sha256"
-      }
-    ]
+  const formatFileSize = (bytes) => {
+    if (bytes === 0) return '0 Bytes';
+    const k = 1024;
+    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
+
+  useEffect(() => {
+    const fetchInstallers = async () => {
+      setLoading(true);
+      setInstallers([]);
+      try {
+        const q = query(
+          collection(db, "installers"),
+          where("platform", "==", selectedPlatform)
+        );
+        const querySnapshot = await getDocs(q);
+        const data = [];
+        querySnapshot.forEach((doc) => {
+          data.push({ id: doc.id, ...doc.data() });
+        });
+        setInstallers(data);
+      } catch (error) {
+        console.error("Error fetching installers:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchInstallers();
+  }, [selectedPlatform]);
 
   return (
     <div className="font-sans min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Header />
-      
+
       {/* Main Content Section */}
       <section className="pt-24 pb-12 px-4 max-w-7xl mx-auto">
         {/* Page Header */}
@@ -143,40 +99,45 @@ export default function DownloadNextPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-white/20">
-              {downloadData[selectedPlatform].map((item, index) => (
-                <tr key={index} className="hover:bg-white/10 transition-colors duration-150">
-                  <td className="px-6 py-4 text-sm text-white">
-                    {item.description}
-                  </td>
-                  <td className="px-6 py-4 text-sm text-white text-right bg-white/5">
-                    {item.fileSize}
-                  </td>
-                  <td className="px-6 py-4 text-sm">
-                    <button
-                      onClick={() => {
-                        const link = document.createElement('a');
-                        link.href = item.downloadLink;
-                        link.download = item.description.replace(/\s+/g, '_') + '.zip';
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                      }}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg"
-                    >
-                      Download
-                    </button>
-                    <span className="text-gray-300 ml-2">({item.sha256})</span>
+              {loading ? (
+                <tr>
+                  <td colSpan={3} className="px-6 py-8 text-center text-white">
+                    Loading...
                   </td>
                 </tr>
-              ))}
+              ) : installers.length === 0 ? (
+                <tr>
+                  <td colSpan={3} className="px-6 py-8 text-center text-white">
+                    No installers found for {selectedPlatform}.
+                  </td>
+                </tr>
+              ) : (
+                installers.map((item) => (
+                  <tr key={item.id} className="hover:bg-white/10 transition-colors duration-150">
+                    <td className="px-6 py-4 text-sm text-white">
+                      {item.fileName}
+                    </td>
+                    <td className="px-6 py-4 text-sm text-white text-right bg-white/5">
+                      {formatFileSize(item.fileSize)}
+                    </td>
+                    <td className="px-6 py-4 text-sm">
+                      <a
+                        href={item.fileUrl}
+                        download={item.fileName}
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:scale-105 shadow-lg"
+                      >
+                        Download
+                      </a>
+                    </td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </div>
-
-
       </section>
 
       <Footer textColor="white" />
     </div>
   );
-} 
+}
