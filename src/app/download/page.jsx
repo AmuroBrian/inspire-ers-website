@@ -44,8 +44,8 @@ export default function DownloadPage() {
               <div className="bg-white p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                 <div className="text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M0 3.544L9.75 2.088v9.4H0V3.544zM9.75 12.4L0 11.044v9.4h9.75v-8.044zM11.25 2.088L24 3.544v9.4H11.25v-9.4zM24 11.044L11.25 12.4v8.044H24v-9.4z"/>
                     </svg>
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">Windows</h3>

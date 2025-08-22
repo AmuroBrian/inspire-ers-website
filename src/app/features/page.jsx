@@ -196,23 +196,15 @@ export default function FeaturesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-8">
             {/* Feature 1: Employee Management */}
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                <img 
-                  src="/images/employee-management.png" 
-                  alt="Employee Management"
-                  className="w-24 h-24 object-cover rounded-lg"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden w-24 h-24 bg-white/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ring-2 ring-blue-500/20 hover:ring-blue-500/40 shadow-blue-500/25 hover:shadow-blue-500/40">
+              <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/x.png)' }}>
+                <div className="w-full h-full bg-black/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                    <p className="text-white/90 text-sm px-4"></p>
+                  </div>
                 </div>
               </div>
               <div className="p-6">
@@ -238,21 +230,13 @@ export default function FeaturesPage() {
             </div>
 
             {/* Feature 2: Attendance Tracking */}
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
-                <img 
-                  src="/images/attendance-tracking.png" 
-                  alt="Attendance Tracking"
-                  className="w-24 h-24 object-cover rounded-lg"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden w-24 h-24 bg-white/20 rounded-lg flex items-center justify-center">
-                <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-                  </svg>
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ring-2 ring-green-500/20 hover:ring-green-500/40 shadow-green-500/25 hover:shadow-green-500/40">
+              <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/att.jpg)' }}>
+                <div className="w-full h-full bg-black/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                    <p className="text-white/90 text-sm px-4"></p>
+                  </div>
                 </div>
               </div>
               <div className="p-6">
@@ -278,21 +262,13 @@ export default function FeaturesPage() {
             </div>
 
             {/* Feature 3: Payroll Management */}
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
-                <img 
-                  src="/images/payroll-management.png" 
-                  alt="Payroll Management"
-                  className="w-24 h-24 object-cover rounded-lg"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden w-24 h-24 bg-white/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"/>
-                  </svg>
+            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ring-2 ring-purple-500/20 hover:ring-purple-500/40 shadow-purple-500/25 hover:shadow-purple-500/40">
+              <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/pay.png)' }}>
+                <div className="w-full h-full bg-black/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                    <p className="text-white/90 text-sm px-4"></p>
+                  </div>
                 </div>
               </div>
               <div className="p-6">
@@ -316,124 +292,73 @@ export default function FeaturesPage() {
                 </ul>
               </div>
             </div>
+          </div>
 
-            {/* Feature 4: Performance Reviews */}
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
-                <img 
-                  src="/images/performance-reviews.png" 
-                  alt="Performance Reviews"
-                  className="w-24 h-24 object-cover rounded-lg"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden w-24 h-24 bg-white/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                  </svg>
+       
+          <div className="flex justify-center mt-8">
+            <div className="grid grid-cols-2 gap-8">
+             
+              {/* <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ring-2 ring-red-500/20 hover:ring-red-500/40 shadow-red-500/25 hover:shadow-red-500/40">
+                <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/leave.png)' }}>
+                  <div className="w-full h-full bg-black/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                      <p className="text-white/90 text-sm px-4"></p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Performance Reviews</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Comprehensive performance evaluation system with goal setting and feedback management.
-                </p>
-                <ul className="mt-4 space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                    Goal Setting
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                    Feedback Management
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
-                    Progress Tracking
-                  </li>
-                </ul>
-              </div>
-            </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Leave Management</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Streamlined leave request and approval system with calendar integration.
+                  </p>
+                  <ul className="mt-4 space-y-2">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                      Leave Requests
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                      Approval Workflow
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                      Calendar Integration
+                    </li>
+                  </ul>
+                </div>
+              </div> */}
 
-            {/* Feature 5: Leave Management */}
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
-                <img 
-                  src="/images/leave-management.png" 
-                  alt="Leave Management"
-                  className="w-24 h-24 object-cover rounded-lg"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden w-24 h-24 bg-white/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"/>
-                  </svg>
+              {/* Feature 6: Reporting & Analytics */}
+              <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ring-2 ring-indigo-500/20 hover:ring-indigo-500/40 shadow-indigo-500/25 hover:shadow-indigo-500/40">
+                <div className="h-48 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/report.png)' }}>
+                  <div className="w-full h-full bg-black/20 flex items-center justify-center">
+                    <div className="text-center">
+                      <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                      <p className="text-white/90 text-sm px-4"></p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Leave Management</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Streamlined leave request and approval system with calendar integration.
-                </p>
-                <ul className="mt-4 space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-                    Leave Requests
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-                    Approval Workflow
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
-                    Calendar Integration
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Feature 6: Reporting & Analytics */}
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center">
-                <img 
-                  src="/images/reporting-analytics.png" 
-                  alt="Reporting & Analytics"
-                  className="w-24 h-24 object-cover rounded-lg"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div className="hidden w-24 h-24 bg-white/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
-                  </svg>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Reporting & Analytics</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Advanced reporting tools with customizable dashboards and data visualization.
+                  </p>
+                  <ul className="mt-4 space-y-2">
+                    <li className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                      Custom Dashboards
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                      Data Visualization
+                    </li>
+                    <li className="flex items-center text-sm text-gray-600">
+                      <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
+                      Export Capabilities
+                    </li>
+                  </ul>
                 </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Reporting & Analytics</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Advanced reporting tools with customizable dashboards and data visualization.
-                </p>
-                <ul className="mt-4 space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
-                    Custom Dashboards
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
-                    Data Visualization
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <span className="w-2 h-2 bg-indigo-500 rounded-full mr-2"></span>
-                    Export Capabilities
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -517,19 +442,10 @@ export default function FeaturesPage() {
 
           {/* Call to Action */}
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-white mb-8">
-              Experience the power of our Employee Record System today
-            </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-                Request Demo
-              </button>
-              <button className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors duration-300">
-                Contact Sales
-              </button>
+           
+            
             </div>
           </div>
         </div>
