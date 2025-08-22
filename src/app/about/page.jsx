@@ -190,123 +190,157 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Side - Text Content */}
             <div className="space-y-8">
-              <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
-                About Us
-              </h1>
-              <h2 className="text-3xl md:text-4xl text-blue-400 font-semibold">
-                Our Story, Mission & Vision
-              </h2>
-              <p className="text-xl text-gray-200 leading-relaxed mb-6">
-                Founded with a vision to revolutionize how businesses manage their workforce, we've been at the forefront of HR technology innovation for over a decade.
-              </p>
-              <p className="text-xl text-gray-200 leading-relaxed mb-6">
-                Our journey began when we recognized the challenges that organizations face in managing employee data efficiently. We set out to create a solution that would not only streamline HR processes but also provide valuable insights for better decision-making.
-              </p>
+              <div className="space-y-6">
+                <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight drop-shadow-2xl">
+                  About <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Us</span>
+                </h1>
+                <h2 className="text-3xl md:text-4xl text-blue-400 font-semibold drop-shadow-lg">
+                  Our Story, Mission & Vision
+                </h2>
+              </div>
+              
+              <div className="space-y-6">
+                <p className="text-xl text-gray-200 leading-relaxed mb-6 backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
+                  Founded with a vision to revolutionize how businesses manage their workforce, we've been at the forefront of HR technology innovation for over a decade.
+                </p>
+                <p className="text-xl text-gray-200 leading-relaxed mb-6 backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
+                  Our journey began when we recognized the challenges that organizations face in managing employee data efficiently. We set out to create a solution that would not only streamline HR processes but also provide valuable insights for better decision-making.
+                </p>
+              </div>
               
               {/* Mission Card */}
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-2xl text-white">
-                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                <p className="text-lg leading-relaxed mb-4">
+              <div className="group bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 p-8 rounded-3xl text-white shadow-2xl hover:shadow-blue-500/25 transition-all duration-500 transform hover:-translate-y-2 border border-blue-400/20">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mr-4 border border-white/30">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-3xl font-bold">Our Mission</h3>
+                </div>
+                <p className="text-xl leading-relaxed mb-6">
                   To provide cutting-edge HR technology solutions that empower organizations to focus on what matters most - their people.
                 </p>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    <span>Streamline HR Operations</span>
+                <div className="space-y-3">
+                  <div className="flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                    <div className="w-3 h-3 bg-white rounded-full mr-4 shadow-lg"></div>
+                    <span className="text-lg font-medium">Streamline HR Operations</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    <span>Enhance Employee Experience</span>
+                  <div className="flex items-center group-hover:translate-x-2 transition-transform duration-300 delay-75">
+                    <div className="w-3 h-3 bg-white rounded-full mr-4 shadow-lg"></div>
+                    <span className="text-lg font-medium">Enhance Employee Experience</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    <span>Drive Business Growth</span>
+                  <div className="flex items-center group-hover:translate-x-2 transition-transform duration-300 delay-150">
+                    <div className="w-3 h-3 bg-white rounded-full mr-4 shadow-lg"></div>
+                    <span className="text-lg font-medium">Drive Business Growth</span>
                   </div>
                 </div>
               </div>
               
               {/* Vision Card */}
-              <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-2xl text-white">
-                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                <p className="text-lg leading-relaxed mb-4">
+              <div className="group bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 p-8 rounded-3xl text-white shadow-2xl hover:shadow-indigo-500/25 transition-all duration-500 transform hover:-translate-y-2 border border-indigo-400/20">
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mr-4 border border-white/30">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                    </svg>
+                  </div>
+                  <h3 className="text-3xl font-bold">Our Vision</h3>
+                </div>
+                <p className="text-xl leading-relaxed mb-6">
                   To become the global standard for employee record management, empowering businesses to focus on what truly matters - their people and their growth.
                 </p>
-                <div className="space-y-2">
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    <span>Global HR Technology Leadership</span>
+                <div className="space-y-3">
+                  <div className="flex items-center group-hover:translate-x-2 transition-transform duration-300">
+                    <div className="w-3 h-3 bg-white rounded-full mr-4 shadow-lg"></div>
+                    <span className="text-lg font-medium">Global HR Technology Leadership</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    <span>AI-Powered Workforce Insights</span>
+                  <div className="flex items-center group-hover:translate-x-2 transition-transform duration-300 delay-75">
+                    <div className="w-3 h-3 bg-white rounded-full mr-4 shadow-lg"></div>
+                    <span className="text-lg font-medium">AI-Powered Workforce Insights</span>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-2 h-2 bg-white rounded-full mr-3"></div>
-                    <span>Seamless Global Integration</span>
+                  <div className="flex items-center group-hover:translate-x-2 transition-transform duration-300 delay-150">
+                    <div className="w-3 h-3 bg-white rounded-full mr-4 shadow-lg"></div>
+                    <span className="text-lg font-medium">Seamless Global Integration</span>
                   </div>
                 </div>
               </div>
             </div>
             
             {/* Right Side - Company Info */}
-            <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Our Core Values</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="space-y-8">
+              <div className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/15 transition-all duration-500 transform hover:-translate-y-2 shadow-2xl hover:shadow-white/10">
+                <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                  </div>
+                  Our Core Values
+                </h3>
+                <div className="space-y-6">
+                  <div className="group/item flex items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover/item:shadow-blue-500/50 transition-all duration-300">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z"/>
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Innovation</h4>
-                      <p className="text-gray-200 text-sm">Pushing boundaries in HR technology</p>
+                      <h4 className="text-white font-bold text-lg mb-2">Innovation</h4>
+                      <p className="text-gray-200">Pushing boundaries in HR technology</p>
                     </div>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mr-4">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="group/item flex items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover/item:shadow-green-500/50 transition-all duration-300">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Customer Focus</h4>
-                      <p className="text-gray-200 text-sm">Putting our customers first</p>
+                      <h4 className="text-white font-bold text-lg mb-2">Customer Focus</h4>
+                      <p className="text-gray-200">Putting our customers first</p>
                     </div>
                   </div>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center mr-4">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="group/item flex items-center p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg group-hover/item:shadow-purple-500/50 transition-all duration-300">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                       </svg>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold">Collaboration</h4>
-                      <p className="text-gray-200 text-sm">Working together for success</p>
+                      <h4 className="text-white font-bold text-lg mb-2">Collaboration</h4>
+                      <p className="text-gray-200">Working together for success</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Quick Stats</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">2</div>
-                    <p className="text-gray-200 text-sm">Companies Served</p>
+              <div className="group bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20 hover:bg-white/15 transition-all duration-500 transform hover:-translate-y-2 shadow-2xl hover:shadow-white/10">
+                <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">50+</div>
-                    <p className="text-gray-200 text-sm">Employees Managed</p>
+                  Quick Stats
+                </h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center group/item p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                    <div className="text-4xl font-bold text-blue-400 mb-2 group-hover/item:text-blue-300 transition-colors duration-300">2</div>
+                    <p className="text-gray-200 font-medium">Companies Served</p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">99.9%</div>
-                    <p className="text-gray-200 text-sm">Uptime</p>
+                  <div className="text-center group/item p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                    <div className="text-4xl font-bold text-green-400 mb-2 group-hover/item:text-green-300 transition-colors duration-300">50+</div>
+                    <p className="text-gray-200 font-medium">Employees Managed</p>
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-400">Mon to Fri</div>
-                    <p className="text-gray-200 text-sm">Support</p>
+                  <div className="text-center group/item p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                    <div className="text-4xl font-bold text-purple-400 mb-2 group-hover/item:text-purple-300 transition-colors duration-300">99.9%</div>
+                    <p className="text-gray-200 font-medium">Uptime</p>
+                  </div>
+                  <div className="text-center group/item p-4 bg-white/5 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
+                    <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover/item:text-cyan-300 transition-colors duration-300">Mon to Fri</div>
+                    <p className="text-gray-200 font-medium">Support</p>
                   </div>
                 </div>
               </div>
